@@ -8,5 +8,5 @@ import com.batch.demo.model.SampleModel;
 @Repository
 @Mapper
 public interface SampleDao {
-	List<SampleModel> selectSampleList(String plcyId);
+	List<SampleModel> selectSampleList();
 }
