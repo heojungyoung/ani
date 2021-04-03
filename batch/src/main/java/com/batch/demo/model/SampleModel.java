@@ -7,33 +7,86 @@ import lombok.Setter;
 @Setter
 public class SampleModel {
 	
-	private Integer id;
-    private String name;
-    private String cntrCode;
-    private String population;
-	public Integer getId() {
-		return id;
+	 private Integer employeeID; 
+     private String empFirstName;
+     private String empLastName;
+     private String empStreetAddress;
+     private String empCity;
+     private String empState;
+     private String empZipCode     ;
+     private String empAreaCode    ;  
+     private String empPhoneNumber;
+     private String empDOB;
+     private String managerID;
+     
+	public Integer getEmployeeID() {
+		return employeeID;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	public void setEmployeeID(Integer employeeID) {
+		this.employeeID = employeeID;
 	}
-	public String getName() {
-		return name;
+	public String getEmpFirstName() {
+		return empFirstName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setEmpFirstName(String empFirstName) {
+		this.empFirstName = empFirstName;
 	}
-	public String getCntrCode() {
-		return cntrCode;
+	public String getEmpLastName() {
+		return empLastName;
 	}
-	public void setCntrCode(String cntrCode) {
-		this.cntrCode = cntrCode;
+	public void setEmpLastName(String empLastName) {
+		this.empLastName = empLastName;
 	}
-	public String getPopulation() {
-		return population;
+	public String getEmpStreetAddress() {
+		return empStreetAddress;
 	}
-	public void setPopulation(String population) {
-		this.population = population;
+	public void setEmpStreetAddress(String empStreetAddress) {
+		this.empStreetAddress = empStreetAddress;
 	}
+	public String getEmpCity() {
+		return empCity;
+	}
+	public void setEmpCity(String empCity) {
+		this.empCity = empCity;
+	}
+	public String getEmpState() {
+		return empState;
+	}
+	public void setEmpState(String empState) {
+		this.empState = empState;
+	}
+	public String getEmpZipCode() {
+		return empZipCode;
+	}
+	public void setEmpZipCode(String empZipCode) {
+		this.empZipCode = empZipCode;
+	}
+	public String getEmpAreaCode() {
+		return empAreaCode;
+	}
+	public void setEmpAreaCode(String empAreaCode) {
+		this.empAreaCode = empAreaCode;
+	}
+	public String getEmpPhoneNumber() {
+		return empPhoneNumber;
+	}
+	public void setEmpPhoneNumber(String empPhoneNumber) {
+		this.empPhoneNumber = empPhoneNumber;
+	}
+	public String getEmpDOB() {
+		return empDOB;
+	}
+	public void setEmpDOB(String empDOB) {
+		this.empDOB = empDOB;
+	}
+	public String getManagerID() {
+		return managerID;
+	}
+	public void setManagerID(String managerID) {
+		this.managerID = managerID;
+	}
+     
+	
+	
     
 }

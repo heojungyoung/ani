@@ -1,5 +1,7 @@
 package com.batch.demo.job;
 
+import java.util.List;
+
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -12,6 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.batch.demo.dao.SampleDao;
+import com.batch.demo.model.SampleModel;
 import com.mysql.cj.log.Log;
 
 import lombok.RequiredArgsConstructor;
@@ -31,6 +34,8 @@ public class SampleJobConfiguration {
 	@Autowired
 	SampleDao sampleDao;
 	
+	List<SampleModel> list;
+	
 	@Bean
 	public Job simpleJob(){
 		return jobBuilderFactory.get("simpleJob")
@@ -41,7 +46,7 @@ public class SampleJobConfiguration {
 	public Step simpleStep1() {
 		return stepBuilderFactory.get("simpleStep1").tasklet((contribution,chunkContext) ->{
 			System.out.println(">>>>>>>>>>>>>>>>>>. this is sparta");
-			sampleDao.selectSampleList();
+			list = sampleDao.selectSampleList();
 			return RepeatStatus.FINISHED;
 		})
 		.build();
